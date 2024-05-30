@@ -22,9 +22,9 @@ export const NeedsMoreInfo: QuestionState = {
 	Color: 0xefad67,
 };
 
-export const Duplicate: QuestionState = {
-	Title: "**🔁 Duplicate Question**",
-	CmdName: "Mark Duplicate",
+export const Redirected: QuestionState = {
+	Title: "**↪️ Question Redirected**",
+	CmdName: "Mark Redirected",
 	Color: 0xef6767,
 };
 
@@ -40,7 +40,7 @@ export function GetQuestionStateFromCommandName(commandName: string): QuestionSt
 			"Mark Answered": Answered,
 			"Mark Unanswered": Unanswered,
 			"Mark Needs More Info": NeedsMoreInfo,
-			"Mark Duplicate": Duplicate,
+			"Mark Redirected": Redirected,
 			"Mark as Will Follow Up": FollowUp,
 		}[commandName] || Unanswered
 	);

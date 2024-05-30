@@ -4,7 +4,7 @@ This is a Discord bot built on Cloudflare Workers with the purpose of managing Q
 
 ## How it works
 
-The bot is triggered by a slash command `/questions` which takes a required `open` argument. The bot will then post a message in the questions channel, inviting users to submit questions via a button. When people submit a question, it gets posted to a separate questions channel via webhook, and the status of the question is clearly indicated (Answered, Unanswered, Duplicate, etc).
+The bot is triggered by a slash command `/questions` which takes a required `open` argument. The bot will then post a message in the questions channel, inviting users to submit questions via a button. When people submit a question, it gets posted to a separate questions channel via webhook, and the status of the question is clearly indicated (Answered, Unanswered, Redirected, etc).
 
 The status of these questions can be managed through Context Menus (right click on a question) and the bot will update the status of the question in the questions channel. For this case, anybody with Manage Messages permission can update the status of a question.
 

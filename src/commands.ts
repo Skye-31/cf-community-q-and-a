@@ -5,7 +5,7 @@ import {
 	RouteBases,
 	Routes,
 } from "discord-api-types/v10";
-import { Unanswered, Answered, NeedsMoreInfo, Duplicate, FollowUp } from "./question-state";
+import { Unanswered, Answered, NeedsMoreInfo, Redirected, FollowUp } from "./question-state";
 import type { APIApplicationCommand } from "discord-api-types/v10";
 
 type ApplicationCommandCreate = Omit<APIApplicationCommand, "id" | "application_id" | "version">;
@@ -47,7 +47,7 @@ const commands: ApplicationCommandCreate[] = [
 		default_member_permissions: ManageMessages,
 	},
 	{
-		name: Duplicate.CmdName,
+		name: Redirected.CmdName,
 		description: "", // message commands don't have descriptions
 		type: ApplicationCommandType.Message,
 		default_member_permissions: ManageMessages,
