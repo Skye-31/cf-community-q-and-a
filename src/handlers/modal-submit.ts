@@ -48,8 +48,9 @@ export default async function (
 					},
 				],
 				username:
-					interaction.member?.nick ??
-					`${interaction.member?.user.username}#${interaction.member.user.discriminator}`,
+					interaction.member?.nick ?? interaction.member?.user.discriminator === "0"
+						? `${interaction.member.user.username}#${interaction.member.user.discriminator}`
+						: interaction.member.user.username,
 				avatar_url: GetMemberAvatar(interaction.member, interaction.guild_id),
 			} as RESTPostAPIWebhookWithTokenJSONBody),
 		});
