@@ -1,6 +1,6 @@
-# Community Call Bot
+# Community Q&A Bot
 
-This is a Discord bot built on Cloudflare Workers with the purpose of managing Question Threads for community calls.
+This is a Discord bot built on Cloudflare Workers with the purpose of managing Question Threads for community Q&As.
 
 ## How it works
 

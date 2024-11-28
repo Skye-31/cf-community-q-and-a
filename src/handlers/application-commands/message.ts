@@ -13,7 +13,7 @@ export default async function (
 	if (message.webhook_id !== GetIDFromWebhook(env.DISCORD_QUESTIONS_WEBHOOK)) {
 		return respondToInteraction({
 			type: InteractionResponseType.ChannelMessageWithSource,
-			data: { content: "Message is not from Community Call Bot", flags: 64 },
+			data: { content: "Message is not from Community Q&A Bot", flags: 64 },
 		});
 	}
 	const answerState = GetQuestionStateFromCommandName(interaction.data.name);
